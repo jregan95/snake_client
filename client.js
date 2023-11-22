@@ -12,7 +12,9 @@ const connect = function() {
   });
   conn.on("connect", () => {
     conn.write("Name: JIL");
+
   });
+
 
   conn.on('data', (data) => {
     console.log(data);
