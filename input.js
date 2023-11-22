@@ -30,6 +30,15 @@ const handleUserInput = function (key) {
   if(key === 'd') {
     connection.write('Move: right');
   }
+  if(key === 'm'){
+    connection.write('Say: I am the WINNER!!!!!');
+  }
+  if(key === 'n'){
+    connection.write('Say: Get out of my way!');
+  }
+  if(key === 'b'){
+    connection.write('Say: Sorry.... new driver.');
+  }
 };
 
 module.exports = {
