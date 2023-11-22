@@ -1,8 +1,8 @@
-let connection; 
+let connection;
 
 
 
-const setupInput = function (conn) {
+const setupInput = function(conn) {
   connection = conn;
   const stdin = process.stdin;
   stdin.setRawMode(true);
@@ -11,32 +11,32 @@ const setupInput = function (conn) {
   stdin.on("data", handleUserInput);
   
   
-  
   return stdin;
 };
-const handleUserInput = function (key) {
-  if(key === '\u0003') {
+
+const handleUserInput = function(key) {
+  if (key === '\u0003') {
     process.exit();
   }
-  if(key === 'w') {
+  if (key === 'w') {
     connection.write('Move: up');
   }
-  if(key === 'a') {
+  if (key === 'a') {
     connection.write('Move: left');
   }
-  if(key === 's') {
+  if (key === 's') {
     connection.write('Move: down');
   }
-  if(key === 'd') {
+  if (key === 'd') {
     connection.write('Move: right');
   }
-  if(key === 'm'){
+  if (key === 'm') {
     connection.write('Say: I am the WINNER!!!!!');
   }
-  if(key === 'n'){
+  if (key === 'n') {
     connection.write('Say: Get out of my way!');
   }
-  if(key === 'b'){
+  if (key === 'b') {
     connection.write('Say: Sorry.... new driver.');
   }
 };
